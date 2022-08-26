@@ -48,6 +48,10 @@ button:hover {
     background-color: #c7a21b;
 }
 
+button:disabled {
+    color: #555;
+}
+
 ul {
     width: 20%;
     margin: 0 auto;

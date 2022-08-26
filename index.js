@@ -1,29 +1,12 @@
 function Pet(species) {
     this.health = 100;
-    this.happiness = 50;
+    this.happiness = 55;
     this.hunger = 0;
-    this.isHappy = true;
-    this.isHealthy = true;
-    this.isHungry = false;
     this.numHeals = 3;
     this.numFood = 10;
     this.species;
+    this.petAge = 0;
 }
-
-// function HealthBar(fill, startHealth, color) {
-//     this.fill = fill;
-//     this.maxHealth = 100;
-//     this.health = startHealth;
-//     this.color = color;
-
-//     show(context){
-//         context.strokeStyle = "#333";
-//         context.lineWidth = 5;
-//         context.fillStyle = this.color;
-//         context.fillRect(this.x, this.y, this.w, this.h);
-//         context.strokeRect(this.x, this.y, this.maxWidth);
-//     }
-// }
 
 
 $(document).ready(function() {
@@ -46,14 +29,17 @@ $(document).ready(function() {
         }
         if(newPet.numHeals == 0 || newPet.numFood == 0){
             $("div#petPic").html(`<img src="/images/gameover.jpg">`);
-            $("#petMessage").text(`You are out of supplies. Game over`)
+            $("#petMessage").text(`You are out of supplies. Game over. You lasted ${newPet.petAge} seconds.`)
+            // $('button#feedPet').attr('disabled', 'disabled');
+            // $('button#healPet').attr('disabled', 'disabled');
+            // $('button#playPet').attr('disabled', 'disabled');
         }
-        if(newPet.health == 0 || newPet.hunger == 100){
+        if(newPet.health == 0 || newPet.hunger == 100 || newPet.happiness == 0){
             $("div#petPic").html(`<img src="/images/gameover.jpg">`);
-            $("#petMessage").text(`You neglected your pet. Game over`);
-            $('button#feedPet').on("click", function(){});
-            $('button#healPet').on("click", function(){});
-            $('button#playPet').on("click", function(){});
+            $("#petMessage").text(`You neglected your pet. Game over. You lasted ${newPet.petAge} seconds.`);
+            // $('button#feedPet').attr('disabled', 'disabled');
+            // $('button#healPet').attr('disabled', 'disabled');
+            // $('button#playPet').attr('disabled', 'disabled');
         }
 
         $("span.health").text(newPet.health);
@@ -61,13 +47,9 @@ $(document).ready(function() {
         $("span.hunger").text(newPet.hunger);
         $("span.heals").text(newPet.numHeals);
         $("span.food").text(newPet.numFood);
-
     }
 
     var newPet = new Pet();
-    // var healthBar = new HealthBar(100, 100, 'green');
-    // var happinessBar = new HealthBar(100, 50, 'green');
-    // var hungerBar = new HealthBar(100, 0, 'green');
 
     $('#select').on("click", function selectSpecies(){
         newPet = new Pet();
@@ -98,6 +80,13 @@ $(document).ready(function() {
             }
             newPet.hunger++;
         }, 2000)
+        setInterval(function(){
+            updateStats();
+            if(newPet.numHeals == 0 || newPet.numFood == 0 || newPet.health == 0 || newPet.hunger == 100 || newPet.happiness == 0){
+                return;
+            }
+            newPet.petAge++;
+        }, 1000)
     });
 
 
