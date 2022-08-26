@@ -86,3 +86,12 @@ li, button {
     margin-top: 3px;
     margin-bottom: 3px; 
 }
+
+@media screen and (max-width: 866px) {
+    ul{
+        width: 50%;
+    }
+    #messageBox{
+        width: 90%;
+    }
+}
