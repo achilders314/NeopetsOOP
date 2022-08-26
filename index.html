@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Neopet Care Station</title>
+</head>
+<body>
+    <header>
+        <div id="banner"><img src="/images/Neopets-logo.png"></div>
+        <div id="messages"></div>
+        <h1>Neopet Care Station</h1>
+        <label for="species">Choose a species:</label>
+        <select id="species" name="species">
+            <option value="bori">Bori</option>
+            <option value="kacheek">Kacheek</option>
+            <option value="mynci">Mynci</option>
+        </select>
+        <button id="select">Choose this species</button>
+    </header>
+    <main>
+        <div id="petPic">
+            <img src="/images/neopets-select.webp">
+        </div>
+        <div id="messageBox">
+            <h4>Message from <span class="species"></span>: <span id="petMessage"></span></h4>
+        </div>
+        <ul>
+            <li id="name">Name: <span class="species"></span></li>
+            <li id="health">Health: <span class="health"></span> </li>
+            <li id="happiness">Happiness: <span class="happiness"></span> </li>
+            <li id="hunger">Hunger: <span class="hunger"></span> </li>
+            <li id="heals">Heals Remaining: <span class="heals"></span></li>
+            <li id="food">Food Remaining: <span class="food"></span></li>
+        </ul>
+        <button id="feedPet">Feed <span class="species"></span> an Omelette</button><br>
+        <button id="healPet">Heal <span class="species"></span></button><br>
+        <button id="playPet">Play with <span class="species"></span></button>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

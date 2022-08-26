@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+}
+
+h1 {
+    padding: 20px 0;
+}
+
+canvas{
+    height: 8px;
+    width: 100px;
+    border: 1px solid black;
+    background: #eee;
+}
+
+#petPic img {
+    height: 250px;
+    margin: 10px 0;
+}
+
+#messageBox{
+    width: 20%;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #ffD026;
+    padding: 10px;
+}
+
+#banner{
+    height: 15vh;
+    background-color: #FFD026;
+}
+#banner img{
+    height: 100%;
+}
+
+button{
+    padding: 5px;
+    background-color: #FFD026;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #c7a21b;
+}
+
+ul {
+    width: 20%;
+    margin: 0 auto;
+    text-align: left;
+    list-style-type:none;
+}
+
+li, button {
+    margin-top: 10px;
+    margin-bottom: 10px; 
+}
