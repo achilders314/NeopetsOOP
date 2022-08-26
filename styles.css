@@ -64,6 +64,12 @@ button{
     padding: 5px;
     background-color: #FFD026;
     border-radius: 5px;
+    color: black;
+}
+
+select {
+    color: black;
+    background-color: #fff;
 }
 
 button:hover {
