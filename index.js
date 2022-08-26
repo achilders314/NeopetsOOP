@@ -11,21 +11,31 @@ function Pet(species) {
 
 $(document).ready(function() {
     function updateStats(){
+        if(newPet.hunger<40){$("div#hungerBarStat").css("background-color", "green");
+    }
+        if(newPet.happiness>50){$("div#happinessBarStat").css("background-color", "green");
+    }
+        if(newPet.health>30) {$("div#healthBarStat").css("background-color", "green");
+    }
         if(newPet.hunger<40 && newPet.happiness>50 && newPet.health > 30){
             $("div#petPic").html(`<img src="/images/${newPet.species}/${newPet.species}_happy.png">`);
             $("#petMessage").text(`I am happy! Yay!`)
         }
         if(newPet.health<30) {
             $("div#petPic").html(`<img src="/images/${newPet.species}/${newPet.species}_sick.png">`);
+            $("div#healthBarStat").css("background-color", "red");
             $("#petMessage").text(`I am feeling sick, please heal me soon!`)
         }
         else if(newPet.happiness<=50){
             $("div#petPic").html(`<img src="/images/${newPet.species}/${newPet.species}_sad.png">`);
             $("#petMessage").text(`I am unhappy, please play with me!`)
+            $("div#happinessBarStat").css("background-color", "red");
+        
         }
         else if(newPet.hunger>40){
             $("div#petPic").html(`<img src="/images/${newPet.species}/${newPet.species}_sad.png">`);
             $("#petMessage").text(`I am hungry, please feed me!`)
+            $("div#hungerBarStat").css("background-color", "red");
         }
         if(newPet.numHeals == 0 || newPet.numFood == 0){
             $("div#petPic").html(`<img src="/images/gameover.jpg">`);
@@ -42,11 +52,12 @@ $(document).ready(function() {
             // $('button#playPet').attr('disabled', 'disabled');
         }
 
-        $("span.health").text(newPet.health);
-        $("span.happiness").text(newPet.happiness);
-        $("span.hunger").text(newPet.hunger);
+        
         $("span.heals").text(newPet.numHeals);
         $("span.food").text(newPet.numFood);
+        $("#healthBarStat").width(newPet.health);
+        $("#happinessBarStat").width(newPet.happiness);
+        $("#hungerBarStat").width(newPet.hunger);
     }
 
     var newPet = new Pet();
@@ -58,9 +69,6 @@ $(document).ready(function() {
         $(".species").text(species);
         $("div#petPic").html(`<img src="/images/${species}/${species}_happy.png">`);
         $("#petMessage").text(`I am unhappy, please play with me!`)
-        $("span.health").text(newPet.health);
-        $("span.happiness").text(newPet.happiness);
-        $("span.hunger").text(newPet.hunger);
         $("span.heals").text(newPet.numHeals);
         $("span.food").text(newPet.numFood)
         setInterval(function(){

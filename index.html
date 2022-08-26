@@ -10,7 +10,6 @@
 <body>
     <header>
         <div id="banner"><img src="/images/Neopets-logo.png"></div>
-        <div id="messages"></div>
         <h1>Neopet Care Station</h1>
         <label for="species">Choose a species:</label>
         <select id="species" name="species">
@@ -28,12 +27,12 @@
             <h4>Message from <span class="species"></span>: <span id="petMessage"></span></h4>
         </div>
         <ul>
-            <li id="name">Name: <span class="species"></span></li>
-            <li id="health">Health: <span class="health"></span> </li>
-            <li id="happiness">Happiness: <span class="happiness"></span> </li>
-            <li id="hunger">Hunger: <span class="hunger"></span> </li>
-            <li id="heals">Heals Remaining: <span class="heals"></span></li>
-            <li id="food">Food Remaining: <span class="food"></span></li>
+            <li id="name">Name: <span class="species"></span></li><br>
+            <li id="health">Health: <span class="health"></span> </li><div class="healthBar"><div id="healthBarStat"></div></div><br>
+            <li id="happiness">Happiness: <span class="happiness"></span> </li><div class="healthBar"><div id="happinessBarStat"></div></div><br>
+            <li id="hunger">Hunger: <span class="hunger"></span> </li><div class="healthBar"><div id="hungerBarStat"></div></div><br>
+            <li id="heals">Heals Remaining: <span class="heals"></span> </li><br>
+            <li id="food">Food Remaining: <span class="food"></span> </li><br>
         </ul>
         <button id="feedPet">Feed <span class="species"></span> an Omelette</button><br>
         <button id="healPet">Heal <span class="species"></span></button><br>
