@@ -1,5 +1,5 @@
-<img src="https://user-images.githubusercontent.com/102301042/187969731-a3c06f49-87fe-4aea-9544-c124f7b3b7bc.png" width="100" alt="Neopets Logo"> 
 # Neopets Care Station 
+<img src="https://user-images.githubusercontent.com/102301042/187969731-a3c06f49-87fe-4aea-9544-c124f7b3b7bc.png" width="100" alt="Neopets Logo">
 An original Neopets project to get back to my roots and practice my object oriented programming and jQuery.
 
 [Live Site on Netlify](https://neopets-care-station.netlify.app/)
