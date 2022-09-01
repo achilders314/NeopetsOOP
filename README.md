@@ -1,4 +1,4 @@
-# Neopets Care Station ![A happy rainbow Kacheek Neopet](https://neopets-care-station.netlify.app/images/Kacheek/Kacheek_happy.png)
+# Neopets Care Station ![A happy rainbow Kacheek Neopet](https://neopets-care-station.netlify.app/images/Kacheek/Kacheek_happy.png | width=100)
 An original Neopets project to get back to my roots and practice my object oriented programming and jQuery.
 
 [Live Site on Netlify](https://neopets-care-station.netlify.app/)
