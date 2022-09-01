@@ -1,5 +1,4 @@
-# Neopets Care Station ![Neopets Logo](https://user-images.githubusercontent.com/102301042/187969731-a3c06f49-87fe-4aea-9544-c124f7b3b7bc.png)
-
+# Neopets Care Station <img src="https://user-images.githubusercontent.com/102301042/187969731-a3c06f49-87fe-4aea-9544-c124f7b3b7bc.png" width="100" alt="Neopets Logo"> 
 An original Neopets project to get back to my roots and practice my object oriented programming and jQuery.
 
 [Live Site on Netlify](https://neopets-care-station.netlify.app/)
@@ -26,5 +25,3 @@ In this Neopets/Tomagotchi game you get to care for a virtual pet. Happiness and
 
 ### Pic of starting Page
 ![Image of Main Page](https://alisonchilders.com/projects/neopetscreenshot.png)
-
-### Movie Page Displaying More Info
